@@ -2,9 +2,9 @@ const test = require('ava')
 
 const randint = require('.')
 
-test('should return a number between 0 and 9', t => {
+test('should return a number between 0 and 9 by default', t => {
   for (let i = 0; i < 100; i += 1) {
     const number = randint()
-    t.truthy(number >= 0 && number <= 9)
+    t.truthy(number >= 0 && number < 10)
   }
 })
