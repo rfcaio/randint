@@ -1,6 +1,6 @@
-# About
+# randint [![Build Status](https://travis-ci.org/rfcaio/randint.svg?branch=master)](https://travis-ci.org/rfcaio/randint) [![Coverage Status](https://coveralls.io/repos/github/rfcaio/randint/badge.svg?branch=master)](https://coveralls.io/github/rfcaio/randint?branch=master)
 
-A simple integer generator.
+> A simple integer generator.
 
 ## Install
 
