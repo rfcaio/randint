@@ -1,11 +1,13 @@
 {
+  "name": "@rfcaio/randint",
+  "version": "1.0.0",
+  "description": "A simple integer generator.",
   "author": {
     "email": "rfcaio90@gmail.com",
     "name": "Caio Rodrigues Fernandes",
     "url": "https://github.com/rfcaio"
   },
   "dependencies": {},
-  "description": "A simple integer generator.",
   "devDependencies": {
     "ava": "3.9.0",
     "coveralls": "3.0.6",
@@ -32,7 +34,6 @@
     }
   },
   "license": "MIT",
-  "name": "@rfcaio/randint",
   "repository": {
     "type": "git",
     "url": "https://github.com/rfcaio/randint.git"
@@ -40,6 +41,5 @@
   "scripts": {
     "lint": "eslint *.js",
     "test": "nyc ava"
-  },
-  "version": "1.0.0"
+  }
 }
