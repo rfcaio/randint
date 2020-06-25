@@ -1,10 +1,8 @@
-const test = require('ava')
-
 const randint = require('.')
 
-test('should return a number between 0 and 9 by default', t => {
-  for (let i = 0; i < 100; i += 1) {
-    const number = randint()
-    t.truthy(number >= 0 && number < 10)
-  }
+describe('randint', () => {
+  test('should return a number between 0 and 9 by default', () => {
+    jest.spyOn(Math, 'random').mockReturnValue(0.996716084261811)
+    expect(randint()).toEqual(9)
+  })
 })

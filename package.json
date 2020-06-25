@@ -9,7 +9,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "ava": "3.9.0",
     "coveralls": "3.0.6",
     "eslint": "6.4.0",
     "eslint-config-prettier": "6.3.0",
@@ -20,7 +19,7 @@
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-standard": "4.0.1",
     "husky": "1.0.0",
-    "nyc": "14.1.1",
+    "jest": "26.1.0",
     "prettier": "1.18.2"
   },
   "files": [
@@ -29,8 +28,8 @@
   "homepage": "https://github.com/rfcaio/randint#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm t",
-      "pre-push": "npm run lint && npm t"
+      "pre-commit": "npm run lint && jest",
+      "pre-push": "npm run lint && npm run test:ci"
     }
   },
   "license": "MIT",
@@ -40,6 +39,7 @@
   },
   "scripts": {
     "lint": "eslint *.js",
-    "test": "nyc ava"
+    "test": "jest --watch",
+    "test:ci": "jest --coverage"
   }
 }
