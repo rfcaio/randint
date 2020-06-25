@@ -20,6 +20,7 @@
     "eslint-plugin-standard": "4.0.1",
     "husky": "1.0.0",
     "jest": "26.1.0",
+    "lint-staged": "10.2.11",
     "prettier": "1.18.2"
   },
   "files": [
@@ -28,17 +29,22 @@
   "homepage": "https://github.com/rfcaio/randint#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && jest",
-      "pre-push": "npm run lint && npm run test:ci"
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run test:ci"
     }
   },
   "license": "MIT",
+  "lint-staged": {
+    "*.js": [
+      "eslint *.js",
+      "jest --passWithNoTests"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/rfcaio/randint.git"
   },
   "scripts": {
-    "lint": "eslint *.js",
     "test": "jest --watch",
     "test:ci": "jest --coverage"
   }
