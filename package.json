@@ -30,7 +30,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "npm run test:coverage"
+      "pre-push": "npm run test:ci"
     }
   },
   "license": "MIT",
@@ -46,7 +46,6 @@
   },
   "scripts": {
     "test": "jest --watch",
-    "test:ci": "jest --watchAll",
-    "test:coverage": "jest --coverage"
+    "test:ci": "jest --coverage"
   }
 }
